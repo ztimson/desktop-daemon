@@ -11,10 +11,19 @@ canvas.height = screenHeight;
 
 function clearScreen() { ctx.clearRect(0, 0, screenWidth, screenHeight); }
 
-const dog = new NPC(ctx, './assets/sprites/shadow-dog/spritesheet.png', '../assets/sprites/shadow-dog/spritesheet.json', {
-	bubbleOffset: [50, 75],
-	scale: 0.25
-});
+const dog = new NPC(ctx,
+	'./assets/sprites/shadow-dog/spritesheet.png',
+	'../assets/sprites/shadow-dog/spritesheet.json', {
+		bubbleOffset: [50, 75],
+		scale: 0.25
+	});
+
+const soldier = new NPC(ctx,
+	'./assets/sprites/soldier/spritesheet.png',
+	'../assets/sprites/soldier/spritesheet.json', {
+		bubbleOffset: [0, 32],
+		scale: 1
+	});
 
 let frame = 0, once = true;
 setInterval(() => {
@@ -23,5 +32,6 @@ setInterval(() => {
 		clearScreen();
 
 		dog.tick();
+		soldier.tick();
 	})
 }, 1000 / FRAME_RATE);

@@ -1,0 +1,14 @@
+{
+	"width": 32,
+	"height": 32,
+	"animations": {
+		"idle": {
+			"y": 0,
+			"frames": 6
+		},
+		"walk": {
+			"y": 0,
+			"frames": 6
+		}
+	}
+}
