@@ -35,9 +35,9 @@ export class NPC {
 		if(this.options.scale == null) this.options.scale = 1;
 		this.sprite = new SpriteSheet(ctx, spriteSheetPath, spriteDefPath);
 
-		setInterval(() => {
-			this.message(String.fromCodePoint(this.emojis[~~(Math.random() * this.emojis.length)]));
-		}, 10000);
+		// setInterval(() => {
+		// 	this.message(String.fromCodePoint(this.emojis[~~(Math.random() * this.emojis.length)]));
+		// }, 10000);
 	}
 
 	animate(name: string, reverse = false) {

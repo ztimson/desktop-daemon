@@ -18,12 +18,12 @@ const dog = new NPC(ctx,
 		scale: 0.25
 	});
 
-const soldier = new NPC(ctx,
+const soldiers = Array(100).fill(null).map(() => new NPC(ctx,
 	'./assets/sprites/soldier/spritesheet.png',
 	'../assets/sprites/soldier/spritesheet.json', {
 		bubbleOffset: [0, 32],
 		scale: 1
-	});
+	}));
 
 let frame = 0, once = true;
 setInterval(() => {
@@ -32,6 +32,6 @@ setInterval(() => {
 		clearScreen();
 
 		dog.tick();
-		soldier.tick();
+		soldiers.forEach(s => s.tick());
 	})
 }, 1000 / FRAME_RATE);
